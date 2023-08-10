@@ -10,8 +10,8 @@ arguments = {
     "mlflow_s3_endpoint_url": "http://mlflow-minio-service.mlflow.svc.cluster.local:9000",
     "mlflow_experiment_name": "demo-notebook",
     "model_name": "wine-quality",
-    "alpha": 0.5,
-    "l1_ratio": 0.5,
+    "alpha": 0.69,
+    "l1_ratio": 0.69,
 }
 
 run_name = "demo-run"
