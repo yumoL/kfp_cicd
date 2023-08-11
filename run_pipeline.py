@@ -17,13 +17,14 @@ arguments = {
 run_name = "demo-run"
 experiment_name = "demo-experiment"
 
-client = kfp.Client()
+if __name__ == "__main__":
+    client = kfp.Client()
 
-client.create_run_from_pipeline_func(
-    pipeline_func=pipeline,
-    run_name=run_name,
-    experiment_name=experiment_name,
-    arguments=arguments,
-    mode=kfp.dsl.PipelineExecutionMode.V2_COMPATIBLE,
-    enable_caching=True
-)
+    client.create_run_from_pipeline_func(
+        pipeline_func=pipeline,
+        run_name=run_name,
+        experiment_name=experiment_name,
+        arguments=arguments,
+        mode=kfp.dsl.PipelineExecutionMode.V2_COMPATIBLE,
+        enable_caching=True
+    )
